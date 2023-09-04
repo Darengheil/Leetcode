@@ -1,0 +1,1 @@
+SELECT DISTINCT date_id, make_name,  lead_id AS unique_leads, partner_id  AS unique_partners FROM DailySales;
