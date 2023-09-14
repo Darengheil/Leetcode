@@ -5,10 +5,9 @@
  */
 var chunk = function(arr, size) {
     let answ = [];
-    for(let i = 0; i < arr.length; i++){
-        answ.push(Array(arr));
+    for(let i = 0; i < arr.length; i +=size){
+        answ.push(arr.slice(i, i+size));
     }
-    console.log(answ);
     return answ;
 };
 
