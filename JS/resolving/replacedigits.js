@@ -4,13 +4,21 @@
  */
 var replaceDigits = function(s) {
     let alph = 'abcdefghijklmnopqrstuvwxyz';
-    let result = s;
-    for (let i = 0; i < result.length; i+=2) {
-        result.replace(result[i+1], alph[alph.indexOf(result[i])]);
-        console.log(alph[alph.indexOf(result[i])])
+    let answ = [];
+    function shift(a,b){
+        return alph[alph.indexOf(a)+b];
     }
-    console.log(result);
-    return result;
+    for (let i = 0; i < s.length; i++) {
+        if(!isNaN(s[i])){
+            answ.push(shift(s[i-1], parseInt(s[i])));
+        }else{
+            answ.push(s[i]);
+        }
+        
+    }
+    return answ.join("");
 };
 
 replaceDigits("a1c1e1");
+
+// 123
