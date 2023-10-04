@@ -20,3 +20,5 @@ var replaceDigits = function(s) {
 };
 
 replaceDigits("a1c1e1");
+
+// 123
